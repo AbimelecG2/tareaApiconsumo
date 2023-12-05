@@ -6,17 +6,17 @@ import 'package:provider/provider.dart';
 void main() => runApp(const MainApp());
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_)=>RespuestaProvider())
+        ChangeNotifierProvider(create: (_) => RespuestaProvider()),
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Home()
+        home: Home(),
       ),
     );
   }

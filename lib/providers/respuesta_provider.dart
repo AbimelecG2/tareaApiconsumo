@@ -4,10 +4,11 @@ import 'package:tareaapi/helper/answer.dart';
 
 class RespuestaProvider extends ChangeNotifier {
   final _ApiAnswer = ApiAnswer();
-  Respuesta mensaje = Respuesta(title: 'Hola', price: '', description: 'Mundo', image: '', category: 'Todos');
+  Respuesta mensaje = Respuesta(
+      title: 'Olla', price: '12', image: 'https://...', category: 'Cocina');
 
   Future<void> loadRespuesta() async {
-    await Future.delayed(const Duration(seconds: 5));
+    await Future.delayed(const Duration(seconds: 10));
     mensaje = await _ApiAnswer.getRespuesta();
     notifyListeners();
   }

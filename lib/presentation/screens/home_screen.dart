@@ -23,8 +23,6 @@ class _HomeState extends State<Home> {
                 Text(respuestaProvider.mensaje.title),
               if (respuestaProvider.mensaje.price.isNotEmpty)
                 Text(respuestaProvider.mensaje.price),
-              if (respuestaProvider.mensaje.description.isNotEmpty)
-                Text(respuestaProvider.mensaje.description),
               if (respuestaProvider.mensaje.image.isNotEmpty)
                 Image.network(respuestaProvider.mensaje.image),
               if (respuestaProvider.mensaje.category.isNotEmpty)
@@ -70,7 +68,7 @@ class _HomeState extends State<Home> {
                     .black, // Color del texto (asegúrate de que sea visible con el fondo amarillo)
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(
-                      0), // Puedes ajustar el radio del borde si lo deseas
+                      10), // Puedes ajustar el radio del borde si lo deseas
                   side: BorderSide(
                       color: Colors.black, width: 2), // Borde negro grueso
                 ),
